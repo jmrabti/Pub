@@ -2,18 +2,18 @@
 
 cd /tmp
 
-curl -O https://raw.githubusercontent.com/jmrabti/Pub/master/AWS_OpenVPN.sh
-chmod +x AWS_OpenVPN.sh
+curl -O https://raw.githubusercontent.com/jmrabti/Pub/master/install_OpenVPN.sh
+chmod +x install_OpenVPN.sh
 
 
 
 export AUTO_INSTALL=y
 export ENDPOINT=$(curl ipinfo.io/ip)
-./AWS_OpenVPN.sh
+./install_OpenVPN.sh
 
 sleep 20
 
 export MENU_OPTION="1"
 export CLIENT="user1"
 export PASS="1"
-./AWS_OpenVPN.sh
+./install_OpenVPN.sh
