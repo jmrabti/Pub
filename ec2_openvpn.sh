@@ -18,7 +18,7 @@ today=$(date +"%m-%d-%y-%H%M")
 
 localip=$(curl -s https://ipinfo.io/ip)
 
-region="us-east-1" #define our region
+region="us-east-1" #define your region
 
 
 printf "Launching EC2 Instance...\\n"
