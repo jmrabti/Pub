@@ -37,50 +37,12 @@ aws ec2 create-key-pair --key-name MyKey$today --query 'KeyMaterial' --output te
 
 chmod 400  ~/Documents/MyKey"$today".pem
 
-#!/bin/bash
-
-set -e
-
-set -u
-
- 
-
-clear
-
- 
-
-ami="ami-05f37c3995fffb4fd"
-
-size="t2.micro"
-
-today=$(date +"%m-%d-%y-%H%M")
-
-localip=$(curl -s https://ipinfo.io/ip)
-
-
-
-printf "Launching EC2 Instance...\\n"
-
-printf "AMI: %s\\n" "$ami"
-
-printf "Type: %s\\n" "$size"
-
-printf "\\n"
-
- 
-
-# Create SSH Key
-
-aws ec2 create-key-pair --key-name MyKey$today --query 'KeyMaterial' --output text >  ~/Documents/MyKey$today.pem
-
-chmod 400  ~/Documents/MyKey"$today".pem
-
 
 # Create Security Group
 
 aws ec2 create-security-group --group-name SG-"$today" --description "Security Group OpenVPN" > /dev/null
 
-aws ec2 authorize-security-group-ingress --group-name SG-"$today" --cidr "$localip"/32 --protocol tcp --port 1194
+aws ec2 authorize-security-group-ingress --group-name SG-"$today" --cidr "$localip"/32 --protocol udp --port 1194
 
 
 # Launch a Ec2 instance
