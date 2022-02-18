@@ -133,7 +133,7 @@ printf "\\n"
 
 sleep 60
 
-# wait a minute while the user_data script install & configure OpenVPN and create user
+printf "wait a minute while the user_data script install & configure OpenVPN and create user\\n"
 
 printf "\\n"
 
