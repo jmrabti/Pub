@@ -17,3 +17,4 @@ export MENU_OPTION="1"
 export CLIENT="user1"
 export PASS="1"
 ./install_OpenVPN.sh
+
