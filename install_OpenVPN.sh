@@ -887,6 +887,7 @@ client-config-dir /etc/openvpn/ccd
 status /var/log/openvpn/status.log
 verb 3" >>/etc/openvpn/server.conf
 
+
 	# Create client-config-dir dir
 	mkdir -p /etc/openvpn/ccd
 	# Create log dir
