@@ -50,7 +50,7 @@ aws ec2 authorize-security-group-ingress --group-name SG-"$today" --cidr "$local
 instance=$(aws ec2 run-instances --image-id $ami --instance-type $size --key-name  MyKey"$today" --region $region --security-groups SG-"$today" --output text --user-data file://user_data.txt)
 
  
-id=$(printf "$instance" | grep INSTANCES | cut -f 8)
+id=$(printf "$instance" | grep INSTANCES | cut -f 9)
 
 state=$(printf "$
 
