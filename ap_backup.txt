@@ -1,0 +1,12 @@
+mgmt.is_default=false
+mgmt.led_enabled=true
+mgmt.cfgversion=d6841ab80b5270aa
+mgmt.authkey=C6A5B6E206F95071057A46472883A616
+mgmt.selfrun_guest_mode=pass
+mgmt.capability=notif,notif-assoc-stat
+mgmt.use_aes_gcm=true
+mgmt.report_crash=true
+mgmt.is_setup_completed=false
+mgmt.servers.1.url=http://192.168.22.5:8080/inform
+stun_url=stun://192.168.22.5/
+mgmt_url=https://192.168.22.5:8443/manage/site/default

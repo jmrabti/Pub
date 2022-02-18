@@ -10,7 +10,7 @@ clear
 
  
 
-ami="ami-05f37c3995fffb4fd"
+ami="ami-0dd555eb7eb3b7c82"
 
 size="t2.micro"
 
